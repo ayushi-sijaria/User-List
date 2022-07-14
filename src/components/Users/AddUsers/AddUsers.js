@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 import Modal from "../../UI/Modal/Modal";
@@ -38,7 +38,7 @@ const AddUsers = (props) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {error && <Modal message={error.message} onClick={closeModal} />}
       <Card className={classes.input}>
         <form onSubmit={submitFormHandler}>
@@ -65,7 +65,7 @@ const AddUsers = (props) => {
           </Button>
         </form>
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 export default AddUsers;
